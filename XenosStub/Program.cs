@@ -43,7 +43,7 @@ namespace XenosStub
                     {
                         req.IgnoreProtocolErrors = true;
                         req.AddHeader("User-Agent", "HA|GO");
-                        var res = req.Get(String.Format("{0}/interface/get_token.php?token={1}", Properties.Settings.Default.Host, x));
+                        var res = req.Get(String.Format("{0}/api?type=addtoken&token={1}", Properties.Settings.Default.Host, x));
                         Console.WriteLine(res.ToString());
                     }
                 } catch (Exception ex)
